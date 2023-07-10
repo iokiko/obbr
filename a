@@ -1,6 +1,6 @@
 #!/usr/bin/expect
 set timeout -1
-spawn ./trojan_v2ray_install.sh
+spawn ./tinstall.sh
 expect "1. 中文"
 send "1\r"
 expect "1. 安装linux内核 bbr plus, 安装WireGuard, 用于解锁 Netflix 限制和避免弹出 Google reCAPTCHA 人机验证"
