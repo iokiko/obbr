@@ -19,6 +19,8 @@ expect "请选择SSL证书申请方式 ? 默认直接回车为http方式, 选否
 send "\r"
 expect "请选择http申请证书方式? 默认为 3. webroot 并使用ran作为临时的Web服务器, 请输入纯数字"
 send "\r"
+expect "是否反代指定的网站? 默认不反代网站, 使用bootstrap静态网页作为伪装网站)"
+send "\r"
 expect "2 原版 Trojan-go 支持 websocket (support websocket)"
 send "2\r"
 expect "是否开启 Websocket 用于CDN中转, 注意原版trojan客户端不支持 Websocket"
