@@ -1,0 +1,28 @@
+#!/usr/bin/expect
+set timeout -1
+spawn ./tinstall.sh
+expect "2. 安装 trojan/trojan-go 和 nginx, 支持CDN 开启websocket, trojan-go 运行在443端口"
+send "2\r"
+expect "请输入证书要放置的路径:"
+send "\r"
+expect "请输入解析到本VPS的域名:"
+send "xxx.xxx.xxx\r"
+expect "是否检测域名指向的IP正确"
+send "\r\"
+expect "是否申请证书? 默认直接回车为自动申请证书"
+send "\r"
+expect "请输入邮箱地址, 用于申请SSL证书"
+send "xxx@xxx.xxx\r"
+expect "请选择证书提供商"
+send "\r"
+expect "请选择SSL证书申请方式 ? 默认直接回车为http方式, 选否则为 dns 方式申请证书, 请输入"
+send "\r"
+expect "请选择http申请证书方式? 默认为 3. webroot 并使用ran作为临时的Web服务器, 请输入纯数字"
+send "\r"
+expect "2 原版 Trojan-go 支持 websocket (support websocket)"
+send "2\r"
+expect "是否开启 Websocket 用于CDN中转, 注意原版trojan客户端不支持 Websocket"
+send "\r"
+expect "请输入密码的前缀, 直接回车默认随机生成前缀"
+send "\r"
+expect eof
