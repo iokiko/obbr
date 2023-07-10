@@ -13,6 +13,6 @@ expect "请选择队列算法 (1) FQ,  (2) FQ-Codel,  (3) FQ-PIE,  (4) CAKE"
 send "4\r"
 expect "已成功开启 bbr + cake"
 send "\r"
-nexpect "已完成 系统网络配置的优化"
+expect "已完成 系统网络配置的优化"
 send "\r"
 expect eof
