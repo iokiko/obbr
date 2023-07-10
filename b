@@ -28,5 +28,5 @@ send "\r"
 expect "请输入密码的前缀, 直接回车默认随机生成前缀"
 send "\r"
 expect "是否自定义Trojan-go的端口号? 直接回车默认为443"
-send "port/r"
+send "port\r"
 expect eof
