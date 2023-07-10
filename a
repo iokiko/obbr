@@ -14,5 +14,5 @@ send "4\r"
 expect "已成功开启 bbr + cake"
 send "\r"
 expect "已完成 系统网络配置的优化"
-send "\r"
+send "n\r"
 expect eof
